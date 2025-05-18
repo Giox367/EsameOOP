@@ -1,0 +1,95 @@
+
+@startuml
+
+package factory {
+  class Employee {
+    -name : String
+    -department : String
+    +toString() : String
+    +toCSV() : String
+  }
+
+  class EmployeeFactory {
+    +createEmployee(name : String, department : String) : Employee
+  }
+}
+
+package iterator {
+  class EmployeeCollection {
+    -list : List<Employee>
+    +add(e: Employee)
+    +iterator() : EmployeeIterator
+  }
+
+  class EmployeeIterator {
+    -list : List<Employee>
+    -index : int
+    +hasNext() : boolean
+    +next() : Employee
+  }
+}
+
+package observer {
+  interface Observer {
+    +update(msg : String)
+  }
+
+  class Observable {
+    -observers : List<Observer>
+    +subscribe(o: Observer)
+    +notifyAll(msg : String)
+  }
+
+  class LogObserver {
+    -area : JTextArea
+    +update(msg : String)
+  }
+}
+
+package exceptions {
+  interface CheckedRunnable {
+    +run() throws Exception
+  }
+
+  class SafeRunner {
+    +run(task: CheckedRunnable)
+  }
+}
+
+package app {
+  class Main {
+    +main(args : String[]) : void
+  }
+}
+
+EmployeeFactory --> Employee
+EmployeeCollection --> Employee
+EmployeeIterator --> Employee
+Observable --> Observer
+Observable --> LogObserver
+Main --> EmployeeCollection
+Main --> Observable
+SafeRunner --> CheckedRunnable
+
+@enduml
+
+package composite {
+  interface Component {
+    +display()
+  }
+
+  class Leaf {
+    -name : String
+    +display()
+  }
+
+  class CompositeMenu {
+    -name : String
+    -children : List<Component>
+    +add(component: Component)
+    +display()
+  }
+}
+
+CompositeMenu ..|> Component
+Leaf ..|> Component
