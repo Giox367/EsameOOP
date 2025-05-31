@@ -1,8 +1,8 @@
-package src.Main.java.composite;
+package composite;
 
 import javax.swing.JTextArea;
 
-// Foglia del Composite pattern
+// Elemento del Composite pattern
 public class Leaf implements Component {
     private String name;
 

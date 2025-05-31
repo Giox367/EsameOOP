@@ -1,10 +1,10 @@
-package src.Main.java.utils;
+package utils;
 
 
 
-import src.Main.java.composite.CompositeMenu;
-import src.Main.java.composite.Component;
-import src.Main.java.composite.Leaf;
+import composite.CompositeMenu;
+import composite.Component;
+import composite.Leaf;
 import java.lang.reflect.Constructor;
 import java.util.List;
 

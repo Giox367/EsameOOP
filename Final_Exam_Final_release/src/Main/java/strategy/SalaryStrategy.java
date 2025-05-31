@@ -1,4 +1,4 @@
-package src.Main.java.strategy;
+package strategy;
 
 
 

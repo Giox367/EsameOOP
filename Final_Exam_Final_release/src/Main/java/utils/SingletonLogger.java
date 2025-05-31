@@ -1,4 +1,4 @@
-package src.Main.java.utils;
+package utils;
 
 
 import java.util.logging.Logger;

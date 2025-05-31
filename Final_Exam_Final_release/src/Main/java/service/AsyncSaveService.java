@@ -1,6 +1,6 @@
-package src.Main.java.service;
+package service;
 
-import src.Main.java.factory.Employee;
+import factory.Employee;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;

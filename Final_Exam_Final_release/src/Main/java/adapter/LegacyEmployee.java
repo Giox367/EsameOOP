@@ -1,4 +1,4 @@
-package src.Main.java.adapter;
+package adapter;
 
 
 // Classe legacy da adattare

@@ -1,7 +1,7 @@
-package src.Main.java.adapter;
+package adapter;
 
 
-import src.Main.java.factory.Employee;
+import factory.Employee;
 
 // Adapter per usare LegacyEmployee come Employee
 public class EmployeeAdapter extends Employee {

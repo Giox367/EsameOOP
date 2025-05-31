@@ -1,6 +1,6 @@
-package src.Main.java.builder;
-import src.Main.java.factory.Employee;
-import src.Main.java.strategy.SalaryStrategy;
+package builder;
+import factory.Employee;
+import strategy.SalaryStrategy;
 
 // Esempio di pattern Builder opzionale
 public class EmployeeBuilder {

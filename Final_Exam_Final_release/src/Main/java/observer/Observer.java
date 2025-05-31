@@ -1,4 +1,4 @@
-package src.Main.java.observer;
+package observer;
 
 
 // Interfaccia Observer per il pattern Observer

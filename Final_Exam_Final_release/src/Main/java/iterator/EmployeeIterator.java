@@ -1,4 +1,4 @@
-package src.Main.java.iterator;
+package iterator;
 
 
 import factory.Employee;

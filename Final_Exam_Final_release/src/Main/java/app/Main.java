@@ -1,21 +1,21 @@
-package src.Main.java.app;
+package app;
 
 // Import pattern e utilità
-import src.Main.java.factory.EmployeeFactory;
-import src.Main.java.factory.Employee;
-import src.Main.java.iterator.EmployeeCollection;
-import src.Main.java.iterator.EmployeeIterator;
-import src.Main.java.exceptions.SafeRunner;
-import src.Main.java.observer.Observable;
-import src.Main.java.observer.LogObserver;
-import src.Main.java.composite.CompositeMenu;
-import src.Main.java.composite.Leaf;
-import src.Main.java.utils.SingletonLogger;
-import src.Main.java.strategy.SalaryStrategy;
-import src.Main.java.strategy.FixedSalaryStrategy;
-import src.Main.java.strategy.HourlySalaryStrategy;
-import src.Main.java.adapter.EmployeeAdapter;
-import src.Main.java.adapter.LegacyEmployee;
+import factory.EmployeeFactory;
+import factory.Employee;
+import iterator.EmployeeCollection;
+import iterator.EmployeeIterator;
+import exceptions.SafeRunner;
+import observer.Observable;
+import observer.LogObserver;
+import composite.CompositeMenu;
+import composite.Leaf;
+import utils.SingletonLogger;
+import strategy.SalaryStrategy;
+import strategy.FixedSalaryStrategy;
+import strategy.HourlySalaryStrategy;
+import adapter.EmployeeAdapter;
+import adapter.LegacyEmployee;
 
 import javax.swing.*;
 import java.awt.*;

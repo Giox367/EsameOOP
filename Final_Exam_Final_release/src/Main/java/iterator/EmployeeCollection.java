@@ -1,11 +1,10 @@
-package src.Main.java.iterator;
-
+package iterator;
 
 import factory.Employee;
 import java.util.ArrayList;
 import java.util.List;
 
-// Collezione custom di Employee con iteratore
+// Collezione di Employee con iteratore
 public class EmployeeCollection {
     private List<Employee> employees = new ArrayList<>();
 

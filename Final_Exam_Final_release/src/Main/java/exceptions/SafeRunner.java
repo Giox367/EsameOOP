@@ -1,7 +1,7 @@
-package src.Main.java.exceptions;
+package exceptions;
 
 
-import utils.SingletonLogger;
+import     utils.SingletonLogger;
 
 // Utility per esecuzione sicura di codice Runnable (Exception Shielding)
 public class SafeRunner {
@@ -10,7 +10,7 @@ public class SafeRunner {
             task.run();
         } catch (Exception e) {
             SingletonLogger.getInstance().getLogger().severe("Errore gestito: " + e.getMessage());
-            System.out.println("Errore gestito in sicurezza.");
+            System.out.println("Errore gestito ");
         }
     }
 }

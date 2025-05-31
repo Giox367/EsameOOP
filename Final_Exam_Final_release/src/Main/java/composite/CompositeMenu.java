@@ -1,4 +1,4 @@
-package src.Main.java.composite;
+package composite;
 
 import javax.swing.JTextArea;
 import java.util.ArrayList;
