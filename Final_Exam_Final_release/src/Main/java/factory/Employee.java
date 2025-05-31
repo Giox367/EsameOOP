@@ -3,6 +3,8 @@ package factory;
 
 import strategy.SalaryStrategy;
 
+// Il mio modello di Employee
+
 public class Employee {
     private String name;
     private String role;

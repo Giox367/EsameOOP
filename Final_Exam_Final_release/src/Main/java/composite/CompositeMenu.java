@@ -4,6 +4,7 @@ import javax.swing.JTextArea;
 import java.util.ArrayList;
 import java.util.List;
 
+// Classe composite che mi permetterà di creare il menu composto
 public class CompositeMenu implements Component {
     private String name;
     private List<Component> children = new ArrayList<>();

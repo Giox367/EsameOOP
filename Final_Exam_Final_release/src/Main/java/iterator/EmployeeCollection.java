@@ -15,4 +15,9 @@ public class EmployeeCollection {
     public EmployeeIterator iterator() {
         return new EmployeeIterator(employees);
     }
+
+    public List<Employee> getAll() {
+        return new ArrayList<>(employees);
+    }
+
 }

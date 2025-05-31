@@ -16,6 +16,7 @@ import strategy.FixedSalaryStrategy;
 import strategy.HourlySalaryStrategy;
 import adapter.EmployeeAdapter;
 import adapter.LegacyEmployee;
+import service.AsyncSaveService;
 
 import javax.swing.*;
 import java.awt.*;
@@ -33,9 +34,10 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        // Avvio il logger
         Logger logger = SingletonLogger.getInstance().getLogger();
         logger.info("Applicazione avviata");
-
+        // Utilizzo la libreria Swing per utilizzare Jframe e costruisco la mia interfaccia grafica
         SwingUtilities.invokeLater(() -> {
             JFrame frame = new JFrame("Gestione Dipendenti");
             frame.setSize(800, 400);
@@ -67,6 +69,8 @@ public class Main {
             inputPanel.add(subRepartoBox);
             inputPanel.add(addButton);
             inputPanel.add(showButton);
+            JButton saveAsyncButton = new JButton("Salva Dipendenti");
+            inputPanel.add(saveAsyncButton);
             frame.add(inputPanel, BorderLayout.NORTH);
 
             repartoBox.addItemListener(e -> {
@@ -135,10 +139,18 @@ public class Main {
                     Employee emp = it.next();
                     area.append(emp.toString() + " (Salario: " + emp.calculateSalary(2000) + ")\n");
                 }
-                // Adapter example
-                LegacyEmployee legacyEmp = new LegacyEmployee("Mario Vecchio", "Manager");
+
+
+                // Esempio di adapter
+                LegacyEmployee legacyEmp = new LegacyEmployee("Signor mario", "Manager");
                 EmployeeAdapter adapter = new EmployeeAdapter(legacyEmp);
                 area.append("Dipendente Legacy adattato: " + adapter.getName() + " - " + adapter.getRole() + "\n");
+            }));
+            // Utilizzo il mutithread per salvare su file i dipendenti
+            saveAsyncButton.addActionListener(e -> SafeRunner.run(() -> {
+                AsyncSaveService saveThread = new AsyncSaveService(collection.getAll());
+                saveThread.start();
+                JOptionPane.showMessageDialog(frame, "Salvataggio avviato in background!");
             }));
 
             frame.setVisible(true);
