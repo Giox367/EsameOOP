@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="AziendaManager" />
+        <module name="Final_Exam_Final_release" />
       </profile>
     </annotationProcessing>
   </component>
